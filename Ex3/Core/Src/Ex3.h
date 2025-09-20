@@ -9,7 +9,7 @@
 #define SRC_EX4_H_
 
 void Trafficlight(void){
-	// ===== Phase 1: Lane1 GREEN, Lane2 RED =====
+		// ===== Phase 1: Lane1 GREEN, Lane2 RED =====
 	    HAL_GPIO_WritePin(RED_LED_Lane1_GPIO_Port, RED_LED_Lane1_Pin, GPIO_PIN_RESET);   // Lane1 RED OFF
 	    HAL_GPIO_WritePin(YELLOW_LED_Lane1_GPIO_Port, YELLOW_LED_Lane1_Pin, GPIO_PIN_RESET); // Lane1 YELLOW OFF
 	    HAL_GPIO_WritePin(GREEN_LED_Lane1_GPIO_Port, GREEN_LED_Lane1_Pin, GPIO_PIN_SET);     // Lane1 GREEN ON

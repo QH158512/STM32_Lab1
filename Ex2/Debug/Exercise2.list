@@ -85,18 +85,18 @@ Disassembly of section .text:
 void Three_led(void){
  800014c:	b580      	push	{r7, lr}
  800014e:	af00      	add	r7, sp, #0
-	HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_RESET);		//RED on
- 8000150:	2200      	movs	r2, #0
+	HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_SET);		//RED on
+ 8000150:	2201      	movs	r2, #1
  8000152:	2120      	movs	r1, #32
  8000154:	481c      	ldr	r0, [pc, #112]	; (80001c8 <Three_led+0x7c>)
  8000156:	f000 fc21 	bl	800099c <HAL_GPIO_WritePin>
-	HAL_GPIO_WritePin(YELLOW_LED_GPIO_Port, YELLOW_LED_Pin, GPIO_PIN_SET);
- 800015a:	2201      	movs	r2, #1
+	HAL_GPIO_WritePin(YELLOW_LED_GPIO_Port, YELLOW_LED_Pin, GPIO_PIN_RESET);
+ 800015a:	2200      	movs	r2, #0
  800015c:	2140      	movs	r1, #64	; 0x40
  800015e:	481a      	ldr	r0, [pc, #104]	; (80001c8 <Three_led+0x7c>)
  8000160:	f000 fc1c 	bl	800099c <HAL_GPIO_WritePin>
-	HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, GPIO_PIN_SET);
- 8000164:	2201      	movs	r2, #1
+	HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, GPIO_PIN_RESET);
+ 8000164:	2200      	movs	r2, #0
  8000166:	2180      	movs	r1, #128	; 0x80
  8000168:	4817      	ldr	r0, [pc, #92]	; (80001c8 <Three_led+0x7c>)
  800016a:	f000 fc17 	bl	800099c <HAL_GPIO_WritePin>
@@ -104,18 +104,18 @@ void Three_led(void){
  800016e:	f241 3088 	movw	r0, #5000	; 0x1388
  8000172:	f000 f991 	bl	8000498 <HAL_Delay>
 
-	HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_SET);
- 8000176:	2201      	movs	r2, #1
+	HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_RESET);
+ 8000176:	2200      	movs	r2, #0
  8000178:	2120      	movs	r1, #32
  800017a:	4813      	ldr	r0, [pc, #76]	; (80001c8 <Three_led+0x7c>)
  800017c:	f000 fc0e 	bl	800099c <HAL_GPIO_WritePin>
-	HAL_GPIO_WritePin(YELLOW_LED_GPIO_Port, YELLOW_LED_Pin, GPIO_PIN_RESET);	//YELLOW on
- 8000180:	2200      	movs	r2, #0
+	HAL_GPIO_WritePin(YELLOW_LED_GPIO_Port, YELLOW_LED_Pin, GPIO_PIN_SET);	//YELLOW on
+ 8000180:	2201      	movs	r2, #1
  8000182:	2140      	movs	r1, #64	; 0x40
  8000184:	4810      	ldr	r0, [pc, #64]	; (80001c8 <Three_led+0x7c>)
  8000186:	f000 fc09 	bl	800099c <HAL_GPIO_WritePin>
-	HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, GPIO_PIN_SET);
- 800018a:	2201      	movs	r2, #1
+	HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, GPIO_PIN_RESET);
+ 800018a:	2200      	movs	r2, #0
  800018c:	2180      	movs	r1, #128	; 0x80
  800018e:	480e      	ldr	r0, [pc, #56]	; (80001c8 <Three_led+0x7c>)
  8000190:	f000 fc04 	bl	800099c <HAL_GPIO_WritePin>
@@ -123,18 +123,18 @@ void Three_led(void){
  8000194:	f44f 60fa 	mov.w	r0, #2000	; 0x7d0
  8000198:	f000 f97e 	bl	8000498 <HAL_Delay>
 
-	HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_SET);
- 800019c:	2201      	movs	r2, #1
+	HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_RESET);
+ 800019c:	2200      	movs	r2, #0
  800019e:	2120      	movs	r1, #32
  80001a0:	4809      	ldr	r0, [pc, #36]	; (80001c8 <Three_led+0x7c>)
  80001a2:	f000 fbfb 	bl	800099c <HAL_GPIO_WritePin>
-	HAL_GPIO_WritePin(YELLOW_LED_GPIO_Port, YELLOW_LED_Pin, GPIO_PIN_SET);
- 80001a6:	2201      	movs	r2, #1
+	HAL_GPIO_WritePin(YELLOW_LED_GPIO_Port, YELLOW_LED_Pin, GPIO_PIN_RESET);
+ 80001a6:	2200      	movs	r2, #0
  80001a8:	2140      	movs	r1, #64	; 0x40
  80001aa:	4807      	ldr	r0, [pc, #28]	; (80001c8 <Three_led+0x7c>)
  80001ac:	f000 fbf6 	bl	800099c <HAL_GPIO_WritePin>
-	HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, GPIO_PIN_RESET);		//GREEN on
- 80001b0:	2200      	movs	r2, #0
+	HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, GPIO_PIN_SET);		//GREEN on
+ 80001b0:	2201      	movs	r2, #1
  80001b2:	2180      	movs	r1, #128	; 0x80
  80001b4:	4804      	ldr	r0, [pc, #16]	; (80001c8 <Three_led+0x7c>)
  80001b6:	f000 fbf1 	bl	800099c <HAL_GPIO_WritePin>
